@@ -1,50 +1,74 @@
-Project: Marketing Analysis
+# Marketing Analysis: Predicting Term Deposit Subscriptions
+
+## Project Overview
+
+This project focuses on identifying customer segments most likely to subscribe to a term deposit at a Portuguese banking institution. By predicting customer behavior, banks can better target their marketing efforts, allocating resources efficiently and effectively where they are most likely to yield results.
+
+The dataset provided consists of 41,188 records with 21 features, many of which are categorical. Our analysis involves converting these categorical variables into a suitable format and introducing additional variables to deepen our understanding of the data. The main goal is to predict whether a client will subscribe to a term deposit, based on various demographic and interaction-related factors.
+
+## Research Question
+
+**Can we accurately predict whether a customer will subscribe to a term deposit based on their profile and past interactions?**
+
+## Dataset Description
+
+This dataset relates to direct marketing campaigns (phone calls) conducted by a Portuguese banking institution. The classification goal is to predict whether a client will subscribe to a term deposit (variable `y`).
+
+### Input Variables
+
+#### Bank Client Data
+1. **Age**: Age of the client (numeric).
+2. **Job**: Type of job (categorical).
+   - Possible values: `"admin."`, `"unknown"`, `"unemployed"`, `"management"`, `"housemaid"`, `"entrepreneur"`, `"student"`, `"blue-collar"`, `"self-employed"`, `"retired"`, `"technician"`, `"services"`.
+3. **Marital**: Marital status (categorical).
+   - Possible values: `"married"`, `"divorced"`, `"single"` (Note: `"divorced"` includes widowed clients).
+4. **Education**: Level of education (categorical).
+   - Possible values: `"unknown"`, `"secondary"`, `"primary"`, `"tertiary"`.
+5. **Default**: Whether the client has credit in default (binary).
+   - Possible values: `"yes"`, `"no"`.
+6. **Balance**: Average yearly balance in euros (numeric).
+7. **Housing**: Whether the client has a housing loan (binary).
+   - Possible values: `"yes"`, `"no"`.
+8. **Loan**: Whether the client has a personal loan (binary).
+   - Possible values: `"yes"`, `"no"`.
+
+#### Last Contact of the Current Campaign
+9. **Contact**: Contact communication type (categorical).
+   - Possible values: `"unknown"`, `"telephone"`, `"cellular"`.
+10. **Day**: Last contact day of the month (numeric).
+11. **Month**: Last contact month of the year (categorical).
+   - Possible values: `"jan"`, `"feb"`, `"mar"`, `"apr"`, `"may"`, `"jun"`, `"jul"`, `"aug"`, `"sep"`, `"oct"`, `"nov"`, `"dec"`.
+12. **Duration**: Last contact duration in seconds (numeric).
+
+#### Other Attributes
+13. **Campaign**: Number of contacts performed during this campaign for this client (numeric, includes last contact).
+14. **Pdays**: Number of days that passed since the client was last contacted from a previous campaign (numeric).
+   - Note: `-1` means the client was not previously contacted.
+15. **Previous**: Number of contacts performed before this campaign for this client (numeric).
+16. **Poutcome**: Outcome of the previous marketing campaign (categorical).
+   - Possible values: `"unknown"`, `"other"`, `"failure"`, `"success"`.
+
+### Output Variable (Target)
+17. **y**: Has the client subscribed to a term deposit? (binary).
+   - Possible values: `"yes"`, `"no"`.
+
+## Analysis Process
+
+1. **Data Preprocessing**: Converting categorical variables into numerical formats, handling missing values, and feature engineering to enhance model performance.
+2. **Exploratory Data Analysis (EDA)**: Understanding the distribution and relationships between variables to gain insights.
+3. **Model Training**: Running various classifiers and exploring different strategies to enhance their performance in predicting campaign responses.
+4. **Model Evaluation**: Assessing the performance of each model using appropriate metrics to ensure accuracy and reliability.
+
+## Conclusion
+
+The aim of this project is to develop a reliable predictive model that can help the bank target the right customers for term deposit offers. By understanding the key factors that influence a customer's decision, the bank can optimize its marketing strategy, resulting in better outcomes.
+
+## Contact
+
+For any questions or further information, please contact [Your Name] at [Your Email].
 
 
-The main issue we're addressing is that numerous banks are interested in identifying the customer 
-segments most likely to take up an offer to better target their efforts effectively
-and efficiently invest their resources where it matters most.
-To start off our analysis process.
-Gain insights into the problem at hand more clearly and thoroughly 
-understand the data set provided by running various classifiers and exploring different strategies to enhance their performance, 
-for predicting campaign responses. The original dataset consists of the banking dataset comprising 41188 rows and 21 characteristics/features
-in total most of which were categorical in nature prompting us to convert the data and introduce variables to delve deeper into each categorical variable present, 
-within it. The specific categorical variables included 'job' 'marital' 'education' 'default' 'housing' 'loan' 'contact' 'month' 'day_of_week' and 'poutcome'.
 
-Our main research question is:
-
-To predict whether a customer avails term deposit or not.
-
-This  data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution.
-The classification goal is to predict if the client will subscribe a term deposit (variable y)
-
-
-Input variables:
-   # bank client data:
-   1 - age (numeric)
-   2 - job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
-                                       "blue-collar","self-employed","retired","technician","services") 
-   3 - marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
-   4 - education (categorical: "unknown","secondary","primary","tertiary")
-   5 - default: has credit in default? (binary: "yes","no")
-   6 - balance: average yearly balance, in euros (numeric) 
-   7 - housing: has housing loan? (binary: "yes","no")
-   8 - loan: has personal loan? (binary: "yes","no")
-   # related with the last contact of the current campaign:
-   9 - contact: contact communication type (categorical: "unknown","telephone","cellular") 
-  10 - day: last contact day of the month (numeric)
-  11 - month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")
-  12 - duration: last contact duration, in seconds (numeric)
-   # other attributes:
-  13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
-  14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
-  15 - previous: number of contacts performed before this campaign and for this client (numeric)
-  16 - poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
-
-  Output variable (desired target):
-  17 - y - has the client subscribed a term deposit? (binary: "yes","no")
-  <img width="437" alt="image" src="https://github.com/user-attachments/assets/ecd69a9e-3818-437c-a6ab-7d21aa926c91">
-  <img width="512" alt="image" src="https://github.com/user-attachments/assets/6a67c462-902d-4273-897a-3d1b1e53fe2c">
 # Term Deposit Subscription Prediction - Model Training
 
 This repository contains scripts and instructions for training machine learning models to predict whether a client will subscribe to a term deposit. The models are trained using a dataset from a Portuguese banking institution, with features such as client demographics, previous interactions, and financial details.
@@ -145,10 +169,41 @@ This script is dedicated to:
 - scikit-learn
 - joblib
 
+
+# Term Deposit Subscription Prediction App
+
+This Streamlit web application allows users to predict whether a client will subscribe to a term deposit based on their profile. The app supports both single client predictions and batch predictions using a pre-trained Random Forest model.
+
+  <img width="437" alt="image" src="https://github.com/user-attachments/assets/ecd69a9e-3818-437c-a6ab-7d21aa926c91">
+  <img width="512" alt="image" src="https://github.com/user-attachments/assets/6a67c462-902d-4273-897a-3d1b1e53fe2c">
+  
+## Features
+
+### 1. Single Prediction
+- **Input Fields**: Users can input client details such as age, job, marital status, education, and more.
+- **Prediction**: The app uses a trained Random Forest model to predict whether the client will subscribe to a term deposit.
+- **Result Display**: The prediction result is displayed immediately, indicating whether the client is likely to subscribe or not.
+
+### 2. Batch Prediction
+- **CSV Upload**: Users can upload a CSV file containing multiple client profiles.
+- **Batch Processing**: The app processes the CSV file, performs predictions for all clients, and displays the results.
+- **Downloadable Results**: Users can download the prediction results as a CSV file.
+## How to Use
+
+### Single Prediction
+1. Select the **Single Prediction** page from the sidebar.
+2. Enter the client details in the provided fields.
+3. Click on the **Predict** button to see whether the client is likely to subscribe to a term deposit.
+
+### Batch Prediction
+1. Select the **Batch Prediction** page from the sidebar.
+2. Upload a CSV file containing the client data.
+3. The app will process the file and display the prediction results.
+4. Click the **Download Predictions** button to download the results as a CSV file.
 ### Installation
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/HoussamEdar/termdeposit
 
 
