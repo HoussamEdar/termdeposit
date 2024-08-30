@@ -14,43 +14,7 @@ The dataset provided consists of 41,188 records with 21 features, many of which 
 
 This dataset relates to direct marketing campaigns (phone calls) conducted by a Portuguese banking institution. The classification goal is to predict whether a client will subscribe to a term deposit (variable `y`).
 
-### Input Variables
 
-#### Bank Client Data
-1. **Age**: Age of the client (numeric).
-2. **Job**: Type of job (categorical).
-   - Possible values: `"admin."`, `"unknown"`, `"unemployed"`, `"management"`, `"housemaid"`, `"entrepreneur"`, `"student"`, `"blue-collar"`, `"self-employed"`, `"retired"`, `"technician"`, `"services"`.
-3. **Marital**: Marital status (categorical).
-   - Possible values: `"married"`, `"divorced"`, `"single"` (Note: `"divorced"` includes widowed clients).
-4. **Education**: Level of education (categorical).
-   - Possible values: `"unknown"`, `"secondary"`, `"primary"`, `"tertiary"`.
-5. **Default**: Whether the client has credit in default (binary).
-   - Possible values: `"yes"`, `"no"`.
-6. **Balance**: Average yearly balance in euros (numeric).
-7. **Housing**: Whether the client has a housing loan (binary).
-   - Possible values: `"yes"`, `"no"`.
-8. **Loan**: Whether the client has a personal loan (binary).
-   - Possible values: `"yes"`, `"no"`.
-
-#### Last Contact of the Current Campaign
-9. **Contact**: Contact communication type (categorical).
-   - Possible values: `"unknown"`, `"telephone"`, `"cellular"`.
-10. **Day**: Last contact day of the month (numeric).
-11. **Month**: Last contact month of the year (categorical).
-   - Possible values: `"jan"`, `"feb"`, `"mar"`, `"apr"`, `"may"`, `"jun"`, `"jul"`, `"aug"`, `"sep"`, `"oct"`, `"nov"`, `"dec"`.
-12. **Duration**: Last contact duration in seconds (numeric).
-
-#### Other Attributes
-13. **Campaign**: Number of contacts performed during this campaign for this client (numeric, includes last contact).
-14. **Pdays**: Number of days that passed since the client was last contacted from a previous campaign (numeric).
-   - Note: `-1` means the client was not previously contacted.
-15. **Previous**: Number of contacts performed before this campaign for this client (numeric).
-16. **Poutcome**: Outcome of the previous marketing campaign (categorical).
-   - Possible values: `"unknown"`, `"other"`, `"failure"`, `"success"`.
-
-### Output Variable (Target)
-17. **y**: Has the client subscribed to a term deposit? (binary).
-   - Possible values: `"yes"`, `"no"`.
 
 ## Analysis Process
 
