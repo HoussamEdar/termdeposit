@@ -12,7 +12,7 @@ The dataset provided consists of 41,188 records with 21 features, many of which 
 
 ## Dataset Description
 
-This dataset relates to direct marketing campaigns (phone calls) conducted by a Portuguese banking institution. The classification goal is to predict whether a client will subscribe to a term deposit (variable `y`).
+The dataset relates to direct marketing campaigns (phone calls) conducted by a Portuguese banking institution. The classification goal is to predict whether a client will subscribe to a term deposit (variable `y`).
 
 
 
