@@ -43,3 +43,7 @@ Input variables:
 
   Output variable (desired target):
   17 - y - has the client subscribed a term deposit? (binary: "yes","no")
+  <img width="437" alt="image" src="https://github.com/user-attachments/assets/ecd69a9e-3818-437c-a6ab-7d21aa926c91">
+  <img width="512" alt="image" src="https://github.com/user-attachments/assets/6a67c462-902d-4273-897a-3d1b1e53fe2c">
+
+
